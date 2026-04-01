@@ -5,7 +5,7 @@ namespace JWTDemo.Services
 {
     public interface IAuthService
     {
-        public string LoginUser(UserLoginOrRegisterCredentials userDto);
+        public Task<string> LoginUser(UserLoginOrRegisterCredentials userDto);
 
         public string RegisterUser(UserLoginOrRegisterCredentials userDto);
     }

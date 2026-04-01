@@ -19,7 +19,7 @@ namespace JWTDemo.Controllers
         }
 
         // get all dogs
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public List<Dog> GetAllDogsFromDB()
         {

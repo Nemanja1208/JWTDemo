@@ -19,7 +19,7 @@ namespace JWTDemo.Controllers
 
         // AUTH SERVICE - GENERERA JWT TOKEN OCH RETURNERA
         [HttpPost]
-        public string Login(UserLoginOrRegisterCredentials userDto)
+        public Task<string> Login(UserLoginOrRegisterCredentials userDto)
         {
             return authService.LoginUser(userDto);
         }
